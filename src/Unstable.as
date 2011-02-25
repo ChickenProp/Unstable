@@ -11,6 +11,7 @@ public class Unstable extends Engine {
 		// There isn't any yet.
 		// Data.load("unstable-data");
 
+		FP.world = new GameWorld();
                 FP.console.enable();
         }
 }
