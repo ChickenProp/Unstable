@@ -3,7 +3,7 @@ package {
 import net.flashpunk.*;
 import net.flashpunk.graphics.*;
 
-public class Platform extends Entity {
+public class Platform extends Obj {
 	[Embed(source = '../media/platform.png')]
 	private const PLATFORM:Class;
 
@@ -18,9 +18,8 @@ public class Platform extends Entity {
 		length = _length;
 		angle = _angle;
 	
-		var img:Image = new Image(PLATFORM);
-		img.centerOO();
-		graphic = img;
+		image = new Image(PLATFORM);
+		image.centerOO();
 		type = "platform";
 	}
 }
