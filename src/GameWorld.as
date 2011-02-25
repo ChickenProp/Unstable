@@ -11,7 +11,7 @@ package
 		public function GameWorld() 
 		{
 			add(new Player);
-			add(new Platform(30, 30, 10, 40));
+			add(new Platform(90, 70, 10, 40));
 		}
 		
 	}
