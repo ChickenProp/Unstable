@@ -1,8 +1,9 @@
 package {
 
 import net.flashpunk.*;
+import net.flashpunk.graphics.*;
 
-class Platform extends Entity {
+public class Platform extends Entity {
 	[Embed(source = '../media/platform.png')]
 	private const PLATFORM:Class;
 
