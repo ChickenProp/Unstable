@@ -7,10 +7,10 @@ import net.flashpunk.debug.*;
 public class Unstable extends Engine {
         public function Unstable() {
                 super(500, 375, 60, false);
-
-		// There isn't any yet.
+				
+				// There isn't any yet.
                 // Data.load("unstable-data");
-
+				FP.world = new GameWorld();
                 FP.console.enable();
         }
 }

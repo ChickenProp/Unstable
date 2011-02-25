@@ -21,7 +21,9 @@
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
-  <file-specs />
+  <file-specs>
+    <path-element>C:\Users\Jonathan\Documents\Flash\Unstable\src\Unstable.as</path-element>
+  </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
   <default-size>
