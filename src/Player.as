@@ -23,20 +23,26 @@ public class Player extends Obj {
 		body.CreateFixture2(new b2CircleShape(1), 1);
 	}
 		
-	override public function update():void 
-	{
-/*		trace(vel.x);
-		if (Input.pressed(Key.LEFT)) {
-			vel.x -= 5;
+	override public function update():void {
+		var force:b2Vec2 = new b2Vec2(0,0);
+		
+		if (Input.check(Key.LEFT)) {
+			force.Add(new b2Vec2(-1, 0));
 		}
-		if (Input.pressed(Key.RIGHT)) {
-			vel.x += 5;
+		if (Input.check(Key.RIGHT)) {
+			force.Add(new b2Vec2(1, 0));
 		}
+		if (Input.check(Key.UP)) {
+			force.Add(new b2Vec2(0, -1));
+		}
+		if (Input.check(Key.DOWN)) {
+			force.Add(new b2Vec2(0, 1));
+		}
+
+		force.Multiply(40);
+
+		body.ApplyForce(force, body.GetWorldCenter());
 			
-		FP.clamp(vel.x, -30, +30);
-		
-		x += vel.x * FP.elapsed;*/
-		
 		super.update();
 	}
 		

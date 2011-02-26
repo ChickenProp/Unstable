@@ -19,6 +19,7 @@ public class GameWorld extends World
 	override public function update () : void {
 		super.update();
 		physics.Step(1/60, 1, 1);
+		physics.ClearForces();
 	}
 
 	override public function render () : void {
