@@ -12,7 +12,6 @@ public class Obj extends Entity {
 
 		if (body) {
 			// Box2D doesn't like to work in units of pixels.
-			FP.console.log(body.GetPosition().y);
 			var pos:b2Vec2 = body.GetPosition();
 			x = pos.x*30;
 			y = pos.y*30;
