@@ -28,7 +28,6 @@ public class GameWorld extends World
 		dbgDraw = new b2DebugDraw();
 
 		var sprite:Sprite = new Sprite();
-		FP.console.log(FP.stage || "bah");
 		FP.stage.addChild(sprite);
 		dbgDraw.SetSprite(sprite);
 		dbgDraw.SetDrawScale(30.0);

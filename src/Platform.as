@@ -25,11 +25,12 @@ public class Platform extends Obj {
 		var bodyDef:b2BodyDef = new b2BodyDef;
 		bodyDef.position = new b2Vec2(_x, _y);
 		bodyDef.type = b2Body.b2_dynamicBody;
-		bodyDef.linearDamping = 0;
+		bodyDef.angularDamping = 1;
 		body = GameWorld.physics.CreateBody(bodyDef);
-		body.CreateFixture2(b2PolygonShape.AsBox(1, 0.1), 1);
+		body.CreateFixture2(b2PolygonShape.AsBox(1, 0.1), 4);
+		FP.console.log(body.GetLinearDamping());
 
-		//body.ApplyImpulse(new b2Vec2(2, 2), new b2Vec2(10, 0));
+		
 
 		var jointDef:b2RevoluteJointDef = new b2RevoluteJointDef();
 		jointDef.Initialize(StaticBodies.platformHost, body,

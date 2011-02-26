@@ -19,7 +19,8 @@ public class Player extends Obj {
 		var bodyDef:b2BodyDef = new b2BodyDef;
 		bodyDef.position = new b2Vec2(4, 5);
 		bodyDef.type = b2Body.b2_dynamicBody;
-		bodyDef.linearDamping = 0;
+		bodyDef.linearDamping = 1;
+		bodyDef.angularDamping = 1;
 		body = GameWorld.physics.CreateBody(bodyDef);
 		body.CreateFixture2(b2PolygonShape.AsBox(.5, .5), 1);
 	}
