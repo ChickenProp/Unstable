@@ -13,7 +13,7 @@ public class Player extends Obj {
 		
 	public function Player() 
 	{
-		image = Image.createRect(32, 32, 0xFF0000);
+		image = Image.createRect(30, 30, 0xFF0000);
 		image.centerOO();
 
 		var bodyDef:b2BodyDef = new b2BodyDef;
@@ -21,7 +21,7 @@ public class Player extends Obj {
 		bodyDef.type = b2Body.b2_dynamicBody;
 		bodyDef.linearDamping = 0;
 		body = GameWorld.physics.CreateBody(bodyDef);
-		body.CreateFixture2(b2PolygonShape.AsBox(1, 1), 1);
+		body.CreateFixture2(b2PolygonShape.AsBox(.5, .5), 1);
 	}
 		
 	override public function update():void {

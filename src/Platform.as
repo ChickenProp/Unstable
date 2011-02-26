@@ -27,7 +27,7 @@ public class Platform extends Obj {
 		bodyDef.type = b2Body.b2_dynamicBody;
 		bodyDef.linearDamping = 0;
 		body = GameWorld.physics.CreateBody(bodyDef);
-		body.CreateFixture2(b2PolygonShape.AsBox(2, 0.1), 1);
+		body.CreateFixture2(b2PolygonShape.AsBox(1, 0.1), 1);
 
 		//body.ApplyImpulse(new b2Vec2(2, 2), new b2Vec2(10, 0));
 
