@@ -21,7 +21,7 @@ public class Player extends Obj {
 		bodyDef.type = b2Body.b2_dynamicBody;
 		bodyDef.linearDamping = 0;
 		body = GameWorld.physics.CreateBody(bodyDef);
-		body.CreateFixture2(new b2CircleShape(1), 1);
+		body.CreateFixture2(b2PolygonShape.AsBox(1, 1), 1);
 	}
 		
 	override public function update():void {
