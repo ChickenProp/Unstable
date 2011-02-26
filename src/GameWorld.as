@@ -1,6 +1,6 @@
 package  
 {
-import net.flashpunk.World;
+import net.flashpunk.*;
 import Box2D.Dynamics.b2World;
 import Box2D.Common.Math.*;
 
@@ -11,12 +11,22 @@ public class GameWorld extends World
 	
 	public function GameWorld() 
 	{
-		physics = new b2World(gravity, true)
+		physics = new b2World(gravity, true);
+		physics;
 
 		add(new Player);
-		add(new Platform(90, 70, 10, 40));
+		add(new Platform(3, 7, 10, 40));
 	}
-		
+
+	override public function update () : void {
+		super.update();
+		physics.Step(20, 1, 1);
+	}
+
+	override public function render () : void {
+		super.render();
+		physics.DrawDebugData();
+	}
 }
 
 }

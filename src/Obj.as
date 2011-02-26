@@ -11,6 +11,7 @@ public class Obj extends Entity {
 		super.update();
 
 		if (body) {
+			FP.console.log(body.GetPosition().y);
 			var pos:b2Vec2 = body.GetPosition();
 			x = pos.x;
 			y = pos.y;
