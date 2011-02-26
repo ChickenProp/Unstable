@@ -11,10 +11,11 @@ public class Obj extends Entity {
 		super.update();
 
 		if (body) {
+			// Box2D doesn't like to work in units of pixels.
 			FP.console.log(body.GetPosition().y);
 			var pos:b2Vec2 = body.GetPosition();
-			x = pos.x;
-			y = pos.y;
+			x = pos.x*30;
+			y = pos.y*30;
 
 			image.angle = -body.GetAngle() * 180 / Math.PI;
 		}
