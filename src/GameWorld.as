@@ -6,7 +6,7 @@ import Box2D.Common.Math.*;
 
 public class GameWorld extends World
 {
-	public static var physics:b2World = new b2World(new b2Vec2(0, 10),true);
+	public static var physics:b2World = new b2World(new b2Vec2(0,0), true);
 	
 	public function GameWorld() 
 	{

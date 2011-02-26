@@ -14,6 +14,7 @@ public class Player extends Obj {
 	public function Player() 
 	{
 		image = Image.createRect(32, 32, 0xFF0000);
+		image.centerOO();
 
 		var bodyDef:b2BodyDef = new b2BodyDef;
 		bodyDef.position = new b2Vec2(4, 5);
