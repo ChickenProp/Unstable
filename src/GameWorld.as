@@ -10,6 +10,8 @@ public class GameWorld extends World
 	
 	public function GameWorld() 
 	{
+		StaticBodies.init();
+
 		add(new Player);
 		add(new Platform(3, 7, 10, 40));
 	}
