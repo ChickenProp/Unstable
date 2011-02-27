@@ -11,7 +11,7 @@ public class Platform extends Obj {
 	[Embed(source = '../media/platform.png')]
 	private const PLATFORM:Class;
 
-	public var length:Number = 20;
+	public var length:Number;
 
 	public function Platform(_x:Number, _y:Number,
 	                         _length:Number, _angle:Number)
@@ -27,7 +27,7 @@ public class Platform extends Obj {
 		bodyDef.type = b2Body.b2_dynamicBody;
 		bodyDef.angularDamping = 1;
 		body = GameWorld.physics.CreateBody(bodyDef);
-		body.CreateFixture2(b2PolygonShape.AsBox(1, 0.1), 4);
+		body.CreateFixture2(b2PolygonShape.AsBox(length, 0.1), 4);
 		FP.console.log(body.GetLinearDamping());
 
 		

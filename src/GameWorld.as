@@ -16,7 +16,8 @@ public class GameWorld extends World
 		StaticBodies.init();
 
 		add(new Player);
-		add(new Platform(3, 7, 10, 40));
+		add(new Platform(3, 7, 2, 40));
+		add(new Platform(5, 6, 1, 0));
 	}
 
 	// FP.stage isn't set when we call the constructor, so we have to have
