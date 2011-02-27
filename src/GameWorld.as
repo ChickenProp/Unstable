@@ -8,7 +8,7 @@ import flash.display.Sprite;
 
 public class GameWorld extends World
 {
-	public static var physics:b2World = new b2World(new b2Vec2(0,0), true);
+	public static var physics:b2World = new b2World(new b2Vec2(0,10), true);
 	public var dbgDraw:b2DebugDraw = null;
 	
 	public function GameWorld() 
@@ -16,6 +16,7 @@ public class GameWorld extends World
 		StaticBodies.init();
 
 		add(new Player);
+		add(new Ball);
 		add(new Platform(3, 7, 2, 40));
 		add(new Platform(5, 6, 1, 0));
 	}

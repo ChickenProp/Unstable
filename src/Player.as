@@ -13,16 +13,19 @@ public class Player extends Obj {
 		
 	public function Player() 
 	{
-		image = Image.createRect(30, 30, 0xFF0000);
+		image = Image.createRect(12, 30, 0xFF0000);
 		image.centerOO();
 
 		var bodyDef:b2BodyDef = new b2BodyDef;
-		bodyDef.position = new b2Vec2(4, 5);
+		bodyDef.position = new b2Vec2(4, 12);
 		bodyDef.type = b2Body.b2_dynamicBody;
-		bodyDef.linearDamping = 1;
+		//bodyDef.linearDamping = 1;
 		bodyDef.angularDamping = 1;
+		//bodyDef.friction = 0.5;
 		body = GameWorld.physics.CreateBody(bodyDef);
-		body.CreateFixture2(b2PolygonShape.AsBox(.5, .5), 1);
+		body.CreateFixture2(b2PolygonShape.AsBox(.2, .5), 1);
+		body.GetFixtureList().SetFriction(300);
+		body.SetFixedRotation(true);
 	}
 		
 	override public function update():void {
@@ -41,7 +44,7 @@ public class Player extends Obj {
 			force.Add(new b2Vec2(0, 1));
 		}
 
-		force.Multiply(40);
+		force.Multiply(60);
 
 		body.ApplyForce(force, body.GetWorldCenter());
 			
